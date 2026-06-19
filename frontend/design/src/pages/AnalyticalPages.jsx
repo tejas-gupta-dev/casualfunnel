@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SessionList from "../components/SessionList";
 import SessionJourney from "../components/SessionJourney";
-import Heatmap from "../components/Heatmap";
+import Heatmap from "../components/HeatMap";
 import Navbar from "../components/Navbar";
 
 const Analytics = () => {
