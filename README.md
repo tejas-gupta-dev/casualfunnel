@@ -284,22 +284,6 @@ npm install
 npm run dev
 ```
 
----
-
-## Environment Variables
-
-### Frontend
-
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
-### Backend
-
-```env
-MONGODB_URI=your_mongodb_uri
-PORT=5000
-```
 
 ---
 
@@ -329,27 +313,6 @@ Dashboard Visualization
 
 ---
 
-# 🎯 Assignment Requirements Covered
-
-✅ Session Tracking
-
-✅ Click Tracking
-
-✅ Session Storage
-
-✅ MongoDB Integration
-
-✅ Sessions Dashboard
-
-✅ User Journey Timeline
-
-✅ Heatmap Visualization
-
-✅ Hosted Application
-
-✅ Public GitHub Repository
-
----
 
 # 🔮 Future Improvements
 
