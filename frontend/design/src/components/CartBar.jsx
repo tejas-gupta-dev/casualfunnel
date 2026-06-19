@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useCartStore } from "../services/cartStore";
+import { useCartStore } from "../services/CartStore";
 
 const CartBar = () => {
   const navigate = useNavigate();
