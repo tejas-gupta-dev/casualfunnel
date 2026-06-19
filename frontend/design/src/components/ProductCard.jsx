@@ -3,7 +3,7 @@
 import { memo } from "react";
 import { useNavigate } from "react-router-dom";
 import { trackEvent } from "../tracking/Tracking";
-import { useCartStore } from "../services/cartStore";
+import { useCartStore } from "../services/CartStore";
 
 const ProductCard = ({ product }) => {
   const navigate = useNavigate();
