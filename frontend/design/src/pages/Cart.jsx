@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import { useEffect } from "react";
-import { useCartStore } from "../services/cartStore";
+import { useCartStore } from "../services/CartStore";
 import { useNavigate } from "react-router-dom";
 import { trackEvent } from "../tracking/Tracking";
 
