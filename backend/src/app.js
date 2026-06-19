@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://casualfunnel-h4oz6dyii-tejas-projects-b42345d4.vercel.app/",
     credentials: true,
   })
 );
