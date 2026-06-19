@@ -87,25 +87,62 @@ export const getsessionevents = async ( req,res ) => {
 };
 
 
-export const getheatmap = async ( req,res ) => {
+export const getheatmap = async (
+  req,
+  res
+) => {
   try {
-    const data = await event.find({
-        p: req.query.page,
+
+    console.log(
+      "SessionId:",
+      req.query.sessionId
+    );
+
+    const data = await event.find(
+      {
+        s: req.query.sessionId,
         e: "click",
-    },
-    {
-        x: 1,
-        y: 1,
-        _id: 0,
-    }).lean();
+      }
+    ).lean();
+
+    console.log(
+      "Heatmap Count:",
+      data.length
+    );
 
     res.json({
       success: true,
       data,
     });
+
   } catch (error) {
+    console.log(error);
+
     res.status(500).json({
       success: false,
     });
   }
 };
+
+// export const getheatmap = async ( req,res ) => {
+//   try {
+//     const data = await event.find({
+//         p: req.query.page,
+//         e: "click",
+//     },
+//     {
+//         x: 1,
+//         y: 1,
+//         _id: 0,
+//     }).lean();
+
+//     res.json({
+//       success: true,
+//       data,
+//     });
+//   } catch (error) {
+//     res.status(500).json({
+//       success: false,
+//     });
+//   }
+// };

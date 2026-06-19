@@ -161,7 +161,7 @@ return (
 
           </div>
 
-          {/* Heatmap Full Width */}
+          
           <div className="mt-6">
             <Heatmap
               sessionId={sessionId}

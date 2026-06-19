@@ -6,5 +6,5 @@ export const getSessions = () =>
 export const getSessionEvents = (sessionId) =>
   api.get(`/events/events/${sessionId}`);
 
-export const getHeatmap = (page) =>
-  api.get(`/events/click-data?page=${encodeURIComponent(page)}`);
+export const getHeatmap = (sessionId) =>
+  api.get(`/events/click-data?sessionId=${sessionId}`);
