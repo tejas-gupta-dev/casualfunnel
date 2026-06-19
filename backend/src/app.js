@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://casualfunnel-jwf0d66sb-tejas-projects-b42345d4.vercel.app/",
+    origin: "https://casualfunnel-jwf0d66sb-tejas-projects-b42345d4.vercel.app",
     credentials: true,
   })
 );
