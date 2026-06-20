@@ -73,10 +73,10 @@ export const login = async (req, res) => {
 
         const { email, password } = req.body;
 
-        const user =
+        const existinguser =
             await user.findOne({ email });
 
-        if (!user) {
+        if (!existinguser) {
             return res.status(401).json({
                 message: "Invalid credentials"
             });
@@ -85,7 +85,7 @@ export const login = async (req, res) => {
         const isPasswordCorrect =
             await bcrypt.compare(
                 password,
-                user.password
+                existinguser.password
             );
 
         if (!isPasswordCorrect) {
@@ -96,7 +96,7 @@ export const login = async (req, res) => {
         }
 
         const token =
-            generateToken(user._id);
+            generateToken(existinguser._id);
 
         res.cookie("token", token, {
             httpOnly: true,
@@ -111,9 +111,9 @@ export const login = async (req, res) => {
             success: true,
             message: "Login successful",
             user: {
-                id: user._id,
-                name: user.name,
-                email: user.email
+                id: existinguser._id,
+                name: existinguser.name,
+                email: existinguser.email
             }
         });
 
